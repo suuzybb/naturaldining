@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NATURAL DINING</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Hiragino Maru Gothic ProN", "ヒラギノ丸ゴ ProN", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1.7;
+  color: #333;
+  background: #fafafa;
+}
+
+/* ファーストビュー */
+.hero {
+  position: relative;
+  height: 60vh;
+  background: url("images/main.jpg") center/cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+/* セクション */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 25px;
+  color: #b48a78;
+  letter-spacing: 0.1em;
+}
+
+/* カード */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ボックス */
+.box {
+  background: white;
+  border-left: 4px solid #b48a78;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Instagramボタン */
+.insta-btn {
+  display: block;
+  text-align: center;
+  background: linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* プロフィール */
+.profile-box {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.profile-image img {
+  width: 280px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.profile-text {
+  flex: 1;
+}
+
+.profile-text h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #b48a78;
+}
+
+.profile-text p {
+  line-height: 1.8;
+}
+
+/* ギャラリー */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* レッスンイメージ写真 */
+.lesson-photo {
+max-width: 900px;
+margin: 40px auto;
+padding: 0 20px;
+}
+
+.lesson-photo img {
+width: 100%;
+border-radius: 15px;
+display: block;
+box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+
+/* ライトボックス */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  inset: 0;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox img {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.lightbox:target {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #aaa;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 600px) {
+
+  .hero-text h1 {
+      font-size: 30px;
+  }
+
+  .hero-text p {
+      font-size: 13px;
+  }
+
+  h2 {
+      font-size: 25px;
+  }
+
+  section p {
+      font-size: 15px;
+      line-height: 1.9;
+  }
+
+  .insta-btn {
+      font-size: 16px;
+  }
+
+  .profile-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image img {
+    width: 150px;
+  }
+
+  body {
+    font-size: 17px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ファーストビュー -->
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>NATURAL DINING</h1>
+    <p>おもてなしを、もっと気軽に</p>
+  </div>
+</div>
+
+<section>
+  <p>
+    約3ヶ月ごとにテーマを変えて、季節に合わせたテーブルコーディネートと簡単なおもてなし料理をご紹介しています。<br><br>
+
+料理のジャンルも和洋中エスニックアジアンと様々です。<br>
+
+日々の暮らしの延長に、素敵なおもてなし空間を気軽に実現できたら楽しいですよね！
+
+
+  </p>
+
+  <a href="https://instagram.com/naturaldining" target="_blank" class="insta-btn">
+    Instagramを見る
+  </a>
+</section>
+
+<section>
+  <h2>LESSON</h2>
+
+  <div class="card">
+    <p>◆ 毎回テーブルコーディネートとお料理が同時に学べ、最後は皆さんで楽しくランチという濃厚レッスン</p>
+
+
+<p>◆ 毎回完結レッスンなので、お好きなテーマやタイミングでご参加いただけます</p>
+
+<p>◆ テーブルコーディネートのデモンストレーションでは、グッズの購入先やお値段も参考までにお伝えしています</p>
+
+<p>◆ お料理も全工程をご覧いただけるデモンストレーション形式（盛り付けのみ皆さまで）なので初心者の方も安心してご参加ください</p>
+
+<p>◆ 2025年12月で教室スタート20周年を迎えました！</p>
+
+
+  </div>
+
+  <div class="box">
+    <h3>こんな方におすすめ</h3>
+
+<p>◆ テーブルコーディネートを習ってみたい方</p>
+
+<p>◆ スーパーなどの身近な食材で手軽なおもてなし料理を習ってみたい方</p>
+
+<p>◆ 家庭でのおもてなしの段取りを学びたい方</p>
+
+<p>◆ インテリアが好きな方・お友達のおうちでおもてなしを受ける感覚で楽しく受講したい方</p>
+
+  </div>
+</section>
+
+<div class="lesson-photo">
+  <img src="images/lesson-main.jpg" alt="レッスン風景">
+</div>
+
+
+<section>
+  <h2>PROFILE</h2>
+
+  <div class="card profile-box">
+
+<div class="profile-image">
+  <img src="images/profile.jpg" alt="講師写真">
+</div>
+
+<div class="profile-text">
+  <h3>上田揚子（うえだあきこ）</h3>
+
+  <p>
+    奈良女子大学生活環境学部食物栄養学科卒<br><br>
+
+    結婚後、おもてなしの趣味が高じてテーブルコーディネート＆おもてなし教室 NATURAL DINING を主宰。<br>
+    2025年で教室スタートから20周年を迎えました。<br><br>
+
+    京都たん熊北店にて15年以上京料理を学ぶ。<br><br>
+
+    息子2人は巣立ち、現在は夫と2人暮らし。<br><br>
+
+    トイプードル（女の子）らんを溺愛中。
+  </p>
+</div>
+
+
+  </div>
+</section>
+
+<section>
+
+<h2>LESSON FLOW</h2>
+
+<div class="card">
+
+<h3>☕ 1．ウェルカムティー</h3>
+
+<p>
+季節のお茶と小さなお菓子をご用意しております。<br>
+リラックスした雰囲気の中で、当日のレッスン内容をご案内いたします。
+</p>
+
+<hr>
+
+<h3>🍽️ 2．デモンストレーション</h3>
+
+<p>
+講師がポイントを説明しながら、お料理の流れをデモンストレーション形式でご紹介します。<br>
+調理のコツやアレンジ方法もお伝えしますので、ご自宅でも再現しやすい内容です。
+</p>
+
+<hr>
+
+<h3>👩‍🍳 3．実食タイム</h3>
+
+<p>
+完成したお料理を、美しくコーディネートされたテーブルで皆さまとご一緒にいただきます。<br>
+おもてなしの雰囲気を楽しみながら、ゆったりとした時間をお過ごしください。
+</p>
+
+<hr>
+
+<h3>💬 4．試食と振り返り</h3>
+
+<p>
+お食事を楽しみながら、ご質問やご感想を伺います。<br>
+テーブルコーディネートやお料理について、気になることは何でもお気軽にご相談ください。
+</p>
+
+<hr>
+
+<h3>🧺 5．お片付けと次回のご案内</h3>
+
+<p>
+皆さまで協力してお片付けを行います。<br>
+終了後には次回レッスンや季節のテーマについてもご案内いたします。
+</p>
+
+<hr>
+
+<h3>🌿 6．解散</h3>
+
+<p>
+レッスン終了後は自由解散となります。<br>
+ご参加ありがとうございました。<br>
+またお会いできますことを楽しみにしております。
+</p>
+
+</div>
+
+</section>
+
+
+<section>
+  <h2>SCHEDULE</h2>
+
+  <div class="card">
+    <p>開催時間　10:00～13:00</p>
+    <p>自宅教室のため10:15から教室をOPENします。
+
+　　<p>10:15～10:30の間にお越しくださいませ。
+
+　　<p> 終了時間は若干変わりますので、お帰り時間が決まったておられる方は、
+
+　　<p>事前にお知らせください♪</p>
+  </div>
+</section>
+
+<section>
+  <h2>ACCESS</h2>
+
+  <div class="card">
+    <p>場所　阪急長岡天神駅から徒歩５分</p>
+    <p>JR長岡京駅から徒歩20分（タクシー１メーター）
+　　<p>駐車場　駐車場が２台
+　　<p>お申し込みの際にお知らせください
+  </div>
+</section>
+
+<section>
+  <h2>PAST LESSON GALLERY</h2>
+
+  <p style="text-align:center;">
+    過去のレッスンの雰囲気をご覧いただけます
+  </p>
+
+  <p style="text-align:center;">
+    <a href="gallery.html" class="insta-btn">
+      過去レッスンをもっと見る
+    </a>
+  </p>
+
+  <div class="gallery">
+    <a href="#img1"><img src="images/lesson1.jpg" alt=""></a>
+    <a href="#img2"><img src="images/lesson2.jpg" alt=""></a>
+    <a href="#img3"><img src="images/lesson3.jpg" alt=""></a>
+  </div>
+</section>
+
+<section>
+  <h2>RESERVE</h2>
+
+  <p style="text-align:center;">
+    ご予約はInstagramのDMよりお気軽にどうぞ
+  </p>
+
+  <a href="https://instagram.com/naturaldining" target="_blank" class="insta-btn">
+    Instagram DMで予約する
+  </a>
+</section>
+
+<div id="img1" class="lightbox">
+  <a href="#"><img src="images/lesson1.jpg" alt=""></a>
+</div>
+
+<div id="img2" class="lightbox">
+  <a href="#"><img src="images/lesson2.jpg" alt=""></a>
+</div>
+
+<div id="img3" class="lightbox">
+  <a href="#"><img src="images/lesson3.jpg" alt=""></a>
+</div>
+
+<footer>
+  <p>c NATURAL DINING</p>
+</footer>
+
+</body>
+</html>
