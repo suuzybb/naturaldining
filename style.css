@@ -1,0 +1,436 @@
+/* ==========================================================
+   NATURAL DINING - style.css
+   ========================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Hiragino Maru Gothic ProN",
+    "ヒラギノ丸ゴ ProN",
+    "Noto Sans JP",
+    sans-serif;
+  background: #faf8f5;
+  color: #444;
+  line-height: 1.9;
+  letter-spacing: .05em;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  transition: .3s;
+}
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 90px 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: normal;
+  color: #b48a78;
+  margin-bottom: 15px;
+}
+
+.sub {
+  text-align: center;
+  color: #999;
+  margin-bottom: 50px;
+}
+
+/* ==========================
+   ファーストビュー
+   ========================== */
+
+.hero {
+  position: relative;
+  height: 85vh;
+  background:
+    linear-gradient(rgba(255, 255, 255, .08), rgba(255, 255, 255, .08)),
+    url(images/main.jpg) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(255, 255, 255, .05), rgba(0, 0, 0, .18));
+}
+
+.hero-text {
+  position: relative;
+  z-index: 10;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  letter-spacing: 6px;
+  color: #fff;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, .35);
+  white-space: nowrap;
+}
+
+.hero p {
+  margin-top: 18px;
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, .35);
+}
+
+/* ==========================
+   スクロール
+   ========================== */
+
+.scroll {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 14px;
+  z-index: 10;
+  letter-spacing: .2em;
+  animation: updown 2s infinite;
+}
+
+@keyframes updown {
+  0%   { transform: translate(-50%, 0); }
+  50%  { transform: translate(-50%, 10px); }
+  100% { transform: translate(-50%, 0); }
+}
+
+/* ==========================
+   共通カード
+   ========================== */
+
+.card {
+  background: #fff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
+  margin-top: 30px;
+  transition: .4s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, .12);
+}
+
+/* ==========================
+   アイコン付きタイトル
+   ========================== */
+
+.icon-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #b48a78;
+}
+
+.icon-title h2 {
+  margin: 0;
+}
+
+.icon {
+  font-size: 34px;
+}
+
+/* ==========================
+   プロフィール
+   ========================== */
+
+.profile-box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.profile-image {
+  flex: 0 0 250px;
+}
+
+.profile-image img {
+  width: 250px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
+}
+
+.profile-text {
+  flex: 1;
+}
+
+.profile-text h3 {
+  margin-bottom: 20px;
+  color: #b48a78;
+}
+
+.profile-text p {
+  margin-bottom: 18px;
+}
+
+/* ==========================
+   グリッドレイアウト（詳細・予約カード）
+   ========================== */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.grid-3 .card {
+  margin-top: 0;
+}
+
+/* ==========================
+   ボタン
+   ========================== */
+
+.btn {
+  display: inline-block;
+  padding: 16px 38px;
+  border-radius: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.instagram {
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+  color: white;
+}
+
+.line {
+  background: #06c755;
+  color: #fff;
+}
+
+.mail {
+  background: #b48a78;
+  color: #fff;
+}
+
+.mail-address {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #b48a78;
+  word-break: break-all;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+/* ==========================
+   汎用ユーティリティ
+   ========================== */
+
+.text-center {
+  text-align: center;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .15);
+}
+
+.lesson-img {
+  width: 100%;
+  border-radius: 18px;
+  margin-bottom: 25px;
+}
+
+.current-lesson-title {
+  color: #b48a78;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.lesson-theme {
+  font-weight: bold;
+  color: #b48a78;
+  margin-bottom: 18px;
+}
+
+.jubako-title {
+  color: #b48a78;
+  font-size: 19px;
+  margin: 25px 0 10px;
+  font-weight: normal;
+  border-bottom: 1px solid #e5ddd5;
+  padding-bottom: 6px;
+}
+
+.lesson-note {
+  color: #999;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.lesson-list {
+  line-height: 2;
+  padding-left: 1.4em;
+}
+
+.gallery-img {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  border-radius: 20px;
+}
+
+.welcome-images {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.welcome-images img {
+  flex: 1 1 320px;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .1);
+}
+
+/* ==========================
+   フェードイン
+   ========================== */
+
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* ==========================
+   フッター
+   ========================== */
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+  font-size: 14px;
+}
+
+footer p {
+  margin-bottom: 6px;
+}
+
+/* ==========================
+   スマホ
+   ========================== */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .profile-box {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .profile-image {
+    flex: none;
+  }
+
+  .profile-image img {
+    width: 130px;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    letter-spacing: 2px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  section {
+    padding: 60px 18px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card p,
+  .card li {
+    font-size: 15px;
+  }
+
+  .profile-text p {
+    font-size: 15px;
+  }
+
+  .welcome-images {
+    gap: 12px;
+  }
+
+  .welcome-images img {
+    flex: 1 1 45%;
+    max-width: none;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
