@@ -52,7 +52,7 @@ section {
 
 .grid img {
   width: 100%;
-  height: 120px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 0;
   cursor: pointer;
@@ -109,6 +109,34 @@ section {
   color: white;
   border-radius: 30px;
   text-decoration: none;
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+  header {
+    padding: 30px 15px;
+  }
+
+  section {
+    padding: 25px 12px;
+  }
+
+  .lesson-box {
+    padding: 15px;
+    margin-bottom: 25px;
+  }
+
+  .lesson-title {
+    font-size: 16px;
+  }
+
+  .grid {
+    gap: 6px;
+  }
+
+  .grid img {
+    aspect-ratio: 1 / 1;
+  }
 }
 </style>
 </head>
