@@ -60,7 +60,7 @@ h2 {
 
 .hero {
   position: relative;
-  height: 85vh;
+  height: 95vh;
   background:
     linear-gradient(rgba(255, 255, 255, .08), rgba(255, 255, 255, .08)),
     url(images/main.jpg) center/cover no-repeat;
@@ -260,6 +260,19 @@ h2 {
   margin-bottom: 25px;
 }
 
+.current-lesson-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.current-lesson-images img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
 .current-lesson-title {
   color: #b48a78;
   font-size: 28px;
@@ -381,7 +394,7 @@ footer p {
   }
 
   .hero {
-    height: 70vh;
+    height: 80vh;
   }
 
   .hero h1 {
